@@ -48,14 +48,19 @@ BtWysiwyg.prototype.OnTopBarMouseOutEvent = function() {
 
 BtWysiwyg.prototype.OnEditButtonClickEvent = function() {    
     this.container.setAttribute('btw-is-editable', 'true');
+    this.editableContainer.setAttribute('contentEditable','true');
 };
 
 BtWysiwyg.prototype.OnConfirmButtonClickEvent = function() {
     this.container.setAttribute('btw-is-editable', 'false');
+    this.editableContainer.setAttribute('contentEditable','false');
+    // dispatchEvent
 };
 
 BtWysiwyg.prototype.OnCancelButtonClickEvent = function() {
     this.container.setAttribute('btw-is-editable', 'false');
+    this.editableContainer.setAttribute('contentEditable','false');
+    // dispatchEvent
 };
 
 BtWysiwyg.prototype.CreateBtWysiwygContent = function() {
